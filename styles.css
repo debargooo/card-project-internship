@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #E4E9F7;
+}
+
+nav {
+  width: 100%;
+  height: 120px;
+  background: #232f3e;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+
+
+main {
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.header {
+  height: 8rem;
+  background-color: rgb(206, 233, 251);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  border: 2px solid skyblue;
+  padding: 12px;
+}
+
+.announcement {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 80%;
+}
+
+.announcement p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: rgb(34, 157, 239);
+}
+
+svg {
+  height: 20px;
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+  height: 32rem;
+  width: 20rem;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+  padding: 15px;
+  border-radius: 20px;
+  gap: 1rem;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+.cards:hover {
+  transform: translateY(-30px);
+ 
+}
+
+
+.cards span {
+  cursor: pointer;
+  margin: auto;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  gap: 3rem;
+
+}
+
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.cards p {
+  color: #369;
+}
+
+div[role="progressbar"] {
+  --size: 6rem;
+  --fg: #369;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+  position: relative;
+}
+
+@keyframes growProgressBar {
+
+  0%,
+  33% {
+    --pgPercentage: 0;
+  }
+
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+}
+
+@property --pgPercentage {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+a {
+  text-decoration: underline;
+  color: rgb(34, 157, 239);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+
+ img {
+  height: 10rem;
+}
+
+
+.details {
+  margin: auto;
+  padding: 10px 21px;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 100%;
+  line-height: 1.15;
+  border-radius: 4px;
+  border: none;
+  transition: color .13s ease-in-out, background .13s ease-in-out, opacity .13s ease-in-out, box-shadow .13s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.details:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+
+
+.counter {
+  font-size: 6rem;
+}
+
+.member-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+}
+
+.members :first-child {
+  font-size: 6rem;
+}
+
+label {
+  margin: auto;
+  padding: 10px 21px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 100%;
+  line-height: 1.15;
+  border-radius: 4px;
+  border: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+input {
+  display: none;
+}
+
+
+label:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+/*-----------------------------Media Queries----------------------*/
+
+
+/*-----------------------------Large Screen Devices----------------------*/
+
+
+
+ @media (max-width: 1220px) {
+  .section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+@media (max-width:930px) {
+  .section {
+    grid-template-columns: repeat(2,0.4fr);
+  }
+  
+}
+
+@media (max-width:815px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
+/*-----------------------------Mobiles----------------------*/
+
+
+@media (max-width: 600px) {
+  .announcement p {
+    font-size: 15px;
+  }
+
+  .announcement svg {
+    height: 30px;
+  }
+
+  .cards {
+    width : 18rem;
+    height: 31rem;
+  }
+
+  .header {
+    padding: 4px;
+  }
+
+}
+
+/*-----------------------------Galaxy Fold----------------------*/
+
+@media (max-width: 300px) {
+ 
+  .cards {
+    height: 34rem;
+    width : 12rem;
+  }
+  .header {
+    padding: 34px;
+  }
+  
+  .announcement p {
+    font-size: 12px;
+  }
+
+}
+
+
