@@ -58,7 +58,7 @@ main {
 span {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  color: rgb(34, 157, 239);
+  color: #2962ff;
 }
 
 svg {
@@ -80,7 +80,7 @@ svg {
   flex-direction: column;
   flex-wrap: wrap;
   background-color: #f5f5f5;
-  height: 32rem;
+  height: 28rem;
   width: 20rem;
   text-align: center;
   box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
@@ -89,7 +89,30 @@ svg {
   gap: 1rem;
   padding: 20px;
   transition: 0.5s;
+  position: relative;
+  overflow: hidden;
 }
+
+.cards::before {
+  content: ''; 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  width: 6rem;
+  height: 6rem; 
+  border-radius: 0 0 0 100%; 
+  z-index: 1; 
+  background-color: #90caf9;
+  transition: all .5s ease;
+}
+
+.cards:hover::before {
+  width: 100%; 
+  height: 100%; 
+  border-radius: 0%;
+  z-index: -1;
+}
+
 
 .cards:hover {
   transform: translateY(-30px);
@@ -116,7 +139,7 @@ svg {
 h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 p {
@@ -125,7 +148,7 @@ p {
 }
 
 .cards p {
-  color: #369;
+  color: #0d47a1 ;
 }
 
 div[role="progressbar"] {
@@ -180,7 +203,7 @@ a {
 
 
  img {
-  height: 10rem;
+  height: 7rem;
 }
 
 
